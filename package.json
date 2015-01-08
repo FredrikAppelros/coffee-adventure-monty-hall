@@ -1,0 +1,11 @@
+{
+  "name": "monty-hall",
+  "version": "0.0.0",
+  "description": "Monty Hall",
+  "author": "Fredrik Appelros",
+  "license": "ISC",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "gulp": "^3.8.10"
+  }
+}
