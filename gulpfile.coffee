@@ -9,7 +9,10 @@ paths =
 gulp.task 'run', ->
   fs.readFile paths.entry, encoding: 'utf-8', (err, data) ->
     throw err if err
-    coffee.run data
+    try
+      coffee.run data
+    catch err
+      console.error err.stack
 
 gulp.task 'watch', ->
   gulp.watch paths.coffee, ['run']
