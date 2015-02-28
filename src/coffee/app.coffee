@@ -5,26 +5,17 @@ randInt = (max) ->
   Math.floor Math.random() * max
 
 monty = (swap) ->
-  # The host hides the car behind one of the doors
-  car = randInt numDoors
-  # The contestant chooses a door
-  choice = randInt numDoors
+  # First, the host should hide the prize behind one of the doors
+
+  # Now, the contestant picks a door
 
   if swap
     ###
-    The host opens all other doors except one. Since he must only
-    reveal goats, if the contestant has not chosen the car, he must
-    leave the door that hides the car.
-
-    If the contestant has chosen the car, the host picks a door at
-    random which he does not open.
+    If the contestant's tactic is to swap door, we need to do something
+    here
     ###
-    last = (choice + randInt(numDoors - 1)) % numDoors
-    last = if choice != car then car
-    # The contestant switches from his original choice
-    choice = last
 
-  choice == car
+  # Here we should return if the contestant won or not
 
 numWins = 0
 for i in [0...numItrs]
